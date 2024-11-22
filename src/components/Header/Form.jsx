@@ -1,17 +1,23 @@
 import Input from '../Input/Input';
+import Button from '../Button/Button';
 
 const Form = (props) => {
-    const { action, method } = props;
-    const input = {
-        type: "search",
-        className: "search-bar",
-        placeholder: "Search for the order #",
-        ariaLabel: "Search for the order"
-    };
+    const { action, method, input, onSubmit } = props;
+    const { type, onChange, className, placeholder, 'aria-label': ariaLabel, value } = input;
 
-    return <form action={action} method={method}>
-        <Input type={input.type} className={input.className} placeholder={input.placeholder} aria-label={input.ariaLabel} />
-    </form>;
-}
+    return (
+        <form action={action} method={method} onSubmit={onSubmit}>
+            <Input
+                type={type}
+                onChange={onChange}
+                className={className}
+                placeholder={placeholder}
+                aria-label={ariaLabel}
+                value={value}
+            />
+            <Button text="Submit" type="submit" />
+        </form>
+    );
+};
 
 export default Form;
