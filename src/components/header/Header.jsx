@@ -1,7 +1,7 @@
 import './Header.css';
 import Logo from './Logo';
 import Form from './Form';
-import Username from './Username';
+import LoginForm from './LoginForm';
 
 const Header = () => {
 
@@ -10,7 +10,7 @@ const Header = () => {
         <header>
             <Logo className="logo" text="PIZZA DAY" />
             <Form action="/search" method="GET" />
-            <Username className="username" text="Vlad" />
+            <LoginForm />
         </header>
     );
 };

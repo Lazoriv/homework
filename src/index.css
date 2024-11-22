@@ -26,3 +26,7 @@ main {
   flex-direction: column;
   min-height: 100%;
 }
+
+form {
+  display: flex;
+}
