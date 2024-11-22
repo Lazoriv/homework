@@ -1,7 +1,7 @@
 import './PizzaItem.css';
 import { useState } from 'react';
 import Button from "../../Button/Button";
-import Counter from "../../Counter/Counter";
+import Counter from "./Counter/Counter";
 
 const PizzaItem = ({ pizza }) => {
 

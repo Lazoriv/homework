@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './Counter.css';
+import Button from '../../../Button/Button';
 
 const Counter = ({ onHideCounter }) => {
 
@@ -19,9 +20,9 @@ const Counter = ({ onHideCounter }) => {
 
     return (
         <div className="counter">
-            <button onClick={handleDecrement} className="decrement" aria-label="Decrease quantity">-</button>
+            <Button onClick={handleDecrement} className="decrement" text="-" aria-label="Decrease quantity" />
             <span>{count}</span>
-            <button onClick={handleIncrement} className="increment" aria-label="Increase quantity">+</button>
+            <Button onClick={handleIncrement} className="increment" text="+" aria-label="Increase quantity" />
         </div>
     )
 }
