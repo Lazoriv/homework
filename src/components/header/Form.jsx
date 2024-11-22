@@ -1,4 +1,4 @@
-import Input from '../input/Input';
+import Input from '../Input/Input';
 
 const Form = (props) => {
     const { action, method } = props;

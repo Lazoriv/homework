@@ -1,7 +1,16 @@
 import './PizzaItem.css';
-import Button from "../../button/Button";
+import { useState } from 'react';
+import Button from "../../Button/Button";
+import Counter from "../../Counter/Counter";
 
 const PizzaItem = ({ pizza }) => {
+
+    const [isShowCounter, setIsShowCounter] = useState(false);
+
+    const handleCounterVisible = () => {
+        setIsShowCounter(!isShowCounter);
+    }
+
     return (
         <div className="pizza-item" key={pizza.id}>
             <img src={pizza.imageUrl} alt={`${pizza.name} pizza`} className="pizza-image" />
@@ -10,9 +19,12 @@ const PizzaItem = ({ pizza }) => {
                 <p className="ingredients">{pizza.ingredients.join(", ")}</p>
                 <p className="price">€{pizza.unitPrice}</p>
             </div>
-            <Button className={pizza.soldOut ? "sold-out" : "add-to-cart"}
-                disabled={pizza.soldOut}
-                text={pizza.soldOut ? "SOLD OUT" : "ADD TO CART"} />
+            <div className="cart-controls">
+                <Button onClick={handleCounterVisible} className={pizza.soldOut ? "sold-out" : "add-to-cart"}
+                    disabled={pizza.soldOut}
+                    text={pizza.soldOut ? "SOLD OUT" : "ADD TO CART"} />
+                {isShowCounter && <Counter onHideCounter={() => setIsShowCounter(false)} />}
+            </div>
         </div>
     );
 };

@@ -1,6 +1,6 @@
 import './Menu.css';
 import pizzas from "./data";
-import PizzaItem from "./pizzaItem/PizzaItem";
+import PizzaItem from "./PizzaItem/PizzaItem";
 
 const Menu = () => {
     return (
