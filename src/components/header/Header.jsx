@@ -10,7 +10,7 @@ const Header = () => {
         <header>
             <Logo className="logo" text="PIZZA DAY" />
             <Form action="/search" method="GET" />
-            <Username class="username" text="Vlad" />
+            <Username className="username" text="Vlad" />
         </header>
     );
 };
