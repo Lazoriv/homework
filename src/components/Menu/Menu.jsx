@@ -1,14 +1,20 @@
 import './Menu.css';
 import pizzas from "./data";
 import PizzaItem from "./PizzaItem/PizzaItem";
+import Title from '../Menu/Title';
+import Subtitle from '../Menu/Subtitle';
 
 const Menu = () => {
     return (
-        <div className="menu-container">
-            {pizzas.map((pizza) => (
-                <PizzaItem pizza={pizza} key={pizza.id} />
-            ))}
-        </div>
+        <main>
+            <Title text="The best pizza." />
+            <Subtitle text="Straight out of the oven, straight to you." />
+            <div className="menu-container">
+                {pizzas.map((pizza) => (
+                    <PizzaItem pizza={pizza} key={pizza.id} />
+                ))}
+            </div>
+        </main>
     );
 };
 
