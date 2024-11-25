@@ -1,8 +1,8 @@
 import './Menu.css';
 import pizzas from "./data";
 import PizzaItem from "./PizzaItem/PizzaItem";
-import Title from '../Menu/Title';
-import Subtitle from '../Menu/Subtitle';
+import Title from '../Title';
+import Subtitle from '../Subtitle';
 
 const Menu = () => {
     return (
