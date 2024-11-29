@@ -33,3 +33,13 @@ main {
 form {
   display: flex;
 }
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.subtitle {
+  color: #FDB913;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
