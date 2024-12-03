@@ -1,6 +1,6 @@
 const SubTitle = (props) => {
-    const { text } = props;
-    return <p>{text}</p>
+    const { text, className } = props;
+    return <p className={className}>{text}</p>
 }
 
 export default SubTitle;

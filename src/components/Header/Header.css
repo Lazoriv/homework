@@ -15,5 +15,19 @@ header {
   
 .username {
     font-weight: bold;
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a.active {
+    text-decoration: underline;
 }
 

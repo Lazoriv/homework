@@ -1,8 +1,8 @@
 import './Cart.css';
 import { cartItems } from './data';
-import Link from '../Link/Link';
-import Title from '../Title';
-import Button from '../Button/Button';
+import Link from '../../components/Link/Link';
+import Title from '../../components/Title';
+import Button from '../../components/Button/Button';
 import CartItem from './CartItem';
 
 const Cart = () => {

@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 import './Menu.css';
 import PizzaItem from './PizzaItem/PizzaItem';
-import Title from '../Title';
-import Subtitle from '../Subtitle';
 
 const Menu = () => {
     const [items, setItems] = useState([]);
@@ -25,15 +23,11 @@ const Menu = () => {
     }, []);
 
     return (
-        <main>
-            <div className="menu-container">
-                <Title text="The best pizza." />
-                <Subtitle text="Straight out of the oven, straight to you." />
-                {items.map((pizza) => (
-                    <PizzaItem key={pizza.id} pizza={pizza} />
-                ))}
-            </div>
-        </main>
+        <div className="menu-container">
+            {items.map((pizza) => (
+                <PizzaItem key={pizza.id} pizza={pizza} />
+            ))}
+        </div>
     );
 };
 
