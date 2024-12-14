@@ -17,7 +17,7 @@ const Cart = () => {
                 ))}
             </div>
             <div className="cart-actions">
-                <NavLink to="/orders/:id" className="order-btn">Order pizzas</NavLink>
+                <NavLink to="/order" className="order-btn">Order pizzas</NavLink>
                 <Button className="clear-btn" text="Clear cart" />
             </div>
         </div>
