@@ -4,6 +4,7 @@ import Link from '../../components/Link/Link';
 import Title from '../../components/Title';
 import Button from '../../components/Button/Button';
 import CartItem from './CartItem';
+import { NavLink } from 'react-router';
 
 const Cart = () => {
     return (
@@ -16,7 +17,7 @@ const Cart = () => {
                 ))}
             </div>
             <div className="cart-actions">
-                <Button className="order-btn" text="Order pizzas" />
+                <NavLink to="/orders/:id" className="order-btn">Order pizzas</NavLink>
                 <Button className="clear-btn" text="Clear cart" />
             </div>
         </div>

@@ -1,10 +1,10 @@
-import './Checkout.css';
+import './Order.css';
 import { useState } from 'react';
 import Input from '../../components/Input/Input';
 import Button from '../../components/Button/Button';
 import Title from '../../components/Title';
 
-const Checkout = () => {
+const Order = () => {
     const [firstName, setFirstName] = useState('vlad');
     const [phone, setPhone] = useState('');
     const [address, setAddress] = useState('');
@@ -80,4 +80,4 @@ const Checkout = () => {
     );
 };
 
-export default Checkout;
+export default Order;

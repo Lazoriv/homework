@@ -51,6 +51,7 @@ input[type="checkbox"] {
     cursor: pointer;
     text-transform: uppercase;
     transition: background-color 0.3s;
+    text-decoration: none;
 }
 
 .order-btn:hover {
