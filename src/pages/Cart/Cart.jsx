@@ -1,19 +1,25 @@
 import './Cart.css';
-import { cartItems } from './data';
 import Link from '../../components/Link/Link';
 import Title from '../../components/Title';
 import Button from '../../components/Button/Button';
 import CartItem from './CartItem';
-import { NavLink } from 'react-router';
+import { NavLink } from 'react-router-dom';
+import { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
+import { AuthContext } from '../../context/AuthContext';
 
 const Cart = () => {
+
+    const { state } = useContext(CartContext);
+    const { userName } = useContext(AuthContext);
+
     return (
         <div className="container">
             <Link href="#" className="back-link" text="← Back to menu" />
-            <Title className="cart-title" text="Your cart, vlad" />
+            <Title className="cart-title" text={`Your cart, ${userName}`} />
             <div className="cart-items">
-                {cartItems.map((cartItem) => (
-                    <CartItem cart={cartItem} key={cartItem.id} />
+                {state.cartItems.map((cartItem) => (
+                    <CartItem state={state} cart={cartItem} key={cartItem.id} />
                 ))}
             </div>
             <div className="cart-actions">

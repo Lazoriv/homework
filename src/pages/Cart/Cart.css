@@ -5,7 +5,7 @@
 
 .cart-item {
     display: grid;
-    grid-template-columns: auto 1fr auto auto;
+    grid-template-columns: auto 1fr auto auto auto;
     align-items: center;
     gap: 1rem;
     padding: 1rem 0;

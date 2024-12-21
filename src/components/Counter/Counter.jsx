@@ -1,28 +1,24 @@
-import { useState } from 'react';
 import './Counter.css';
 import Button from '../Button/Button';
 
-const Counter = ({ onHideCounter }) => {
-
-    const [count, setCount] = useState(1);
-
-    const handleIncrement = () => {
-        setCount(count + 1)
-    }
-
-    const handleDecrement = () => {
-        if (count > 1) {
-            setCount(count - 1);
-        } else {
-            onHideCounter();
-        }
-    }
+const Counter = ({ qty, onIncrement, onDecrement }) => {
 
     return (
         <div className="counter">
-            <Button onClick={handleDecrement} className="decrement" text="-" aria-label="Decrease quantity" />
-            <span>{count}</span>
-            <Button onClick={handleIncrement} className="increment" text="+" aria-label="Increase quantity" />
+            <Button
+                onClick={onDecrement}
+                className="decrement"
+                text="-"
+                aria-label="Decrease quantity"
+                disabled={qty <= 0}
+            />
+            <span>{qty}</span>
+            <Button
+                onClick={onIncrement}
+                className="increment"
+                text="+"
+                aria-label="Increase quantity"
+            />
         </div>
     )
 }
