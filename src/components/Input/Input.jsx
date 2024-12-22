@@ -3,16 +3,19 @@ import './Input.css';
 
 const Input = (props) => {
     const {
-        //control, 
+        control,
         name,
         placeholder,
         type,
         'aria-label': ariaLabel,
         className,
-        id
+        id,
+        ...rest
     } = props;
 
-    // const { field } = useController({ name, control });
+    const { field } = control
+        ? useController({ name, control })
+        : { field: { ...rest } };
 
     return (
         <div>
@@ -22,7 +25,7 @@ const Input = (props) => {
                 placeholder={placeholder}
                 aria-label={ariaLabel}
                 className={className}
-            // {...field}
+                {...field}
             />
         </div>
     );

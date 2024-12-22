@@ -26,6 +26,7 @@ const Form = (props) => {
         <div className="container">
             <Title text="The best pizza." />
             <Subtitle text="Straight out of the oven, straight to you." className="subtitle" />
+
             <form action={action} method={method} onSubmit={handleSubmit}>
                 <Input
                     type="text"
