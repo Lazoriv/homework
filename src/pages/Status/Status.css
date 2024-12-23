@@ -1,6 +1,7 @@
 .badges {
     display: flex;
     gap: 0.5rem;
+    margin-bottom: 20px;
 }
 
 .badge {

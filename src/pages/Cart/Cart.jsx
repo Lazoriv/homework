@@ -18,12 +18,18 @@ const Cart = () => {
             <Link href="#" className="back-link" text="← Back to menu" />
             <Title className="cart-title" text={`Your cart, ${userName}`} />
             <div className="cart-items">
-                {state.cartItems.map((cartItem) => (
-                    <CartItem state={state} cart={cartItem} key={cartItem.id} />
-                ))}
+                {state.cartItems.length > 0 ? (
+                    state.cartItems.map((cartItem) => (
+                        <CartItem state={state} cart={cartItem} key={cartItem.id} />
+                    ))
+                ) : (
+                    <p className="empty-cart">Your cart is empty. Add some pizzas to start your order!</p>
+                )}
             </div>
             <div className="cart-actions">
-                <NavLink to="/order" className="order-btn">Order pizzas</NavLink>
+                <NavLink to="/order" className={`order-btn ${state.cartItems.length === 0 ? 'disabled' : ''}`}>
+                    Order pizzas
+                </NavLink>
                 <Button className="clear-btn" text="Clear cart" />
             </div>
         </div>

@@ -15,9 +15,7 @@ const CartItem = ({ cart }) => {
         <div className="cart-item" key={cart.id}>
             <span className="quantity-text">{cart.qty}×</span>
             <span>{cart.name}</span>
-            {<span className="price">€{totalPrice.toFixed(1)}</span>
-            }
-
+            <span className="price">€{totalPrice.toFixed(1)}</span>
             <div className="quantity-controls">
                 <Counter
                     qty={cart.qty}

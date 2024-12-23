@@ -6,6 +6,11 @@
     padding: 1rem;
     border-bottom: 1px solid #eee;
 }
+
+.pizza-status {
+    border-bottom: 1px solid #eee;
+    padding: 1rem;
+}
   
 .pizza-image {
     width: 100px;
