@@ -65,6 +65,18 @@ const Status = () => {
 
     const minutesPassed = calculateTimePassed(order.estimatedDelivery);
 
+    const calculatePizzaTotal = () => {
+        let total = 0;
+
+        if (order && order.cart) {
+            order.cart.forEach(item => {
+                total += item.totalPrice || 0;
+            });
+        }
+
+        return total;
+    };
+
 
     const calculateOrderTotal = () => {
         let total = 0;
@@ -122,7 +134,7 @@ const Status = () => {
             <div className="price-breakdown">
                 <div className="price-item">
                     <span className="price-label">Price pizza:</span>
-                    <span className="price-value">€{totalOrderPrice.toFixed(2)}</span>
+                    <span className="price-value">€{calculatePizzaTotal().toFixed(2)}</span>
                 </div>
                 {order.priorityPrice && (
                     <div className="price-item">
